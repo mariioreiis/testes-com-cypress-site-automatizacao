@@ -11,6 +11,14 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+
+Cypress.Commands.add('ValidaHome', function(){
+    cy.title()
+    .should('eq', 'My Store')
+    cy.get('.logo')
+    .should('be.visible')
+})
+
 //
 //
 // -- This is a child command --

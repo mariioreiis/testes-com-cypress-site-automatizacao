@@ -6,10 +6,7 @@ describe('Testes no site My Store', function() {
       })
 
       it('Acessa a home do site', function(){
-          cy.title()
-          .should('eq', 'My Store')
-          cy.get('.logo')
-          .should('be.visible')
+        cy.ValidaHome()
       })
 
       it('Testar o login do site', function(){
@@ -70,7 +67,7 @@ describe('Testes no site My Store', function() {
         cy.get('#message')
         .should('be.visible')
         .clear()
-        .type('este campo está receendo um teste automatizado utilizando o cypress ...')
+        .type('este campo está recebendo um teste automatizado utilizando o cypress ...')
         .should('not.have.text')
 
         cy.get('#submitMessage > span')
