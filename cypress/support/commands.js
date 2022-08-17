@@ -19,6 +19,10 @@ Cypress.Commands.add('ValidaHome', function(){
     .should('be.visible')
 })
 
+Cypress.Commands.add('VisibilidadeContactUs', function(){
+    cy.get('#contact-link > a')
+    .should('be.visible')
+})
 //
 //
 // -- This is a child command --

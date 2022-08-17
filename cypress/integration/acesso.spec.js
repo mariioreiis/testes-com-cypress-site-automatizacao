@@ -18,14 +18,12 @@ describe('Testes no site My Store', function() {
       })
 
       it('Acesso ao "Contact Us"', function(){
-        cy.get('#contact-link > a')
-        .should('be.visible')
+        cy.VisibilidadeContactUs()
         .click()
       })
 
       it('Testar envio sem preencher os campos do "Contact Us"', function(){
-        cy.get('#contact-link > a')
-        .should('be.visible')
+        cy.VisibilidadeContactUs()
         .click()
 
         cy.get('#submitMessage > span')
@@ -37,8 +35,7 @@ describe('Testes no site My Store', function() {
       })
 
       it('Preencher os campos do "Contact Us" e enviar, voltar a Home no final da execução', function(){
-        cy.get('#contact-link > a')
-        .should('be.visible')
+        cy.VisibilidadeContactUs()
         .click()
 
         cy.get('#id_contact')
